@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,inital-scale=1.0">
+		<meta charset="utf-8">
+		<title>Procedural Generation</title>
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+		<div class="header">
+			<h1>Procedural Generation</h1>
+			<h2>Liam Strilchuk</h2>
+		</div>
+		<div class="text">
+			<p>Have you ever played a game like Minecraft or Terraria? If so, you'll have noticed a fundamental difference between them and other games. They have a world that is nearly infinite, and can be explored for as long as you want. The way they do this is using something called "procedural terrain generation".</p>
+			<p>Procedural terrain generation is the creation of realistic terrain using a computer, instead of making it manually. While it may take weeks or more for a designer to create a video game level, it can be done in seconds using computers.</p>
+			<p>This procedure has many benefits over traditional creation of levels. It can be implemented much more quickly, and does not require skilled designers. Some games, such as Grand Theft Auto, have dozens of developers and have taken years to make. It also gives more replayability—the world is different on every playthrough, and the user will not get bored as quickly. Creating a completely different type of world is also trivial, as changing a few settings can drastically change the output. Finally, the world is nearly infinite in size. Users can explore them for as long as they want, instead of being limited to a few levels.</p>
+			<p>However, there are also some drawbacks. First, procedurally generated worlds can't be anywhere near as detailed as one created by a human. Levels can also be repetitive—while the worlds are not the same, the content is similar. Bugs and other types of errors are more common, as not every level can be tested. Finally, it is much harder to include a realistic storyline in the game if the maps are not consistent, and thus most procedurally generated games do not have an in-depth story.</p>
+			<h2>How does procedural generation work?</h2>
+			<p>The most common form of procedural generation is an algorithm called perlin noise. How this works isn't very important—all you need to know is that it takes a coordinate and gives back a number from zero to one. A map of these values looks something like this:</p>
+			<div class="img-container">
+				<img src="img1.png">
+			</div>
+			<p>Most of the time, multiple layers of perlin noise are used—what this means is that several of these images are stacked on top of each other, and their values are averaged out. This is what the result of that process looks like:</p>
+			<div class="img-container">
+				<img src="img2.png">
+			</div>
+			<p>Right now this doesn't look anything like a video game world; it's more like a grey blob. To fix this, I'll add some colours: light grey will be blue, to represent water, grey will be yellow, for sand, and dark grey will be green, for forest. After changing around some values, we have what looks like a map of an island:</p>
+			<div class="img-container">
+				<img src="img3.png">
+			</div>
+			<p>So, two-dimensional worlds can be created fairly easily using this algorithm. Three-dimensional worlds also aren't too difficult. All that is needed to transform a 2D plane to a 3D world is a heightmap—how tall each region of the world is. Perlin noise can also be used for this purpose. We can use yet another layer of the noise as the heightmap, and this is what the result of this looks like:</p>
+			<div class="img-container">
+				<img src="img4.png">
+			</div>
+			<p>This is an extremely simple example of this algorithm, just to demonstrate its capabilities. Other people have made procedurally generated worlds so realistic that they almost look like images.</p>
+			<p>There are other algorithms, similar to perlin noise, that are also used. One of these is called "simplex noise". Simplex noise generates data in a similar fashion to perlin noise, but much faster. However, its results are "rougher", and harder to use.</p>
+			<h2>Other uses of procedural generation</h2>
+			<p>There are many other uses for procedural generation. Creating terrain for games is the most well known use, but it is used in many other fields of computer science. In the last few years, new programs have been developed that can create music without any human intervention. The results of these programs can't be told apart by humans—computers can now create songs that sound exactly the same as ones created by people.</p>
+			<p>Movies and television shows often use procedural generation for landscapes. For example, The Mandalorian's scenes were made using a game engine, and displayed on a screen behind the actors.</p>
+			<div class="img-container">
+				<img src="img5.jpg">
+			</div>
+			<p>In conclusion, procedural generation is an extremely powerful tool that can be used by game developers. It can save time, and creates a world that can be explored almost infinitely.</p>
+			<h2>References</h2>
+			<div class="references">
+				<span>“Chapter 1. Generating Complex Procedural Terrains Using the GPU.” NVIDIA Developer, </span>
+				<span>https://developer.nvidia.com/gpugems/gpugems3/part-i-geometry/chapter-1-generating-complex-procedural-terrains-using-gpu. Accessed 26 January 2022.</span>
+				<span>Kazemi, Darius. “How to effectively use procedural generation in games.” Game Developer, 10 April 2019, </span>
+				<span>https://www.gamedeveloper.com/design/how-to-effectively-use-procedural-generation-in-games. Accessed 26 January 2022.</span>
+				<span>“Procedural Generation – A Comprehensive Guide Put in Simple Words.” scaleyourapp.com, </span>
+				<span>https://www.scaleyourapp.com/procedural-generation-a-comprehensive-guide-in-simple-words/. Accessed 26 January 2022.</span>
+				<span>“Procedural Generation in Game Development.” davidepesce.com, 24 February 2020, </span>
+				<span>https://www.davidepesce.com/2020/02/24/procedural-generation-in-game-development/. Accessed 26 January 2022.</span>
+				<span>Van Brummelen, Jessica, and Bryan Chen. “Creating 3D worlds with Deep Learning.” Procedural Generation,</span>
+				<span>http://www.mit.edu/~jessicav/6.S198/Blog_Post/ProceduralGeneration.html. Accessed 26 January 2022.</span>
+			</div>
+		</div>
+	</body>
+</html>
